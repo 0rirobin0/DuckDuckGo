@@ -20,7 +20,7 @@ public class Model extends JPanel implements ActionListener {
     private final int N_BLOCKS = 15;
     private final int SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE;
     private final int MAX_GHOSTS = 12;
-    private final int PACMAN_SPEED = 6;
+    private final int DUCK_SPEED = 6;
 
     private int N_GHOSTS = 6;
     private int lives, score;
@@ -70,10 +70,10 @@ public class Model extends JPanel implements ActionListener {
 
      //Getting image
     private void loadImages() {
-        down = new ImageIcon("src/DDG/asset/duck-dancing-duck.gif").getImage();
-        up = new ImageIcon("src/DDG/asset/duck-dancing-duck.gif").getImage();
-        left = new ImageIcon("src/DDG/asset/duck-dancing-duck.gif").getImage();
-        right = new ImageIcon("src/DDG/asset/duck-dancing-duck.gif").getImage();
+        down = new ImageIcon("src/DDG/asset/duck up.gif").getImage();
+        up = new ImageIcon("src/DDG/asset/duck up.gif").getImage();
+        left = new ImageIcon("src/DDG/asset/duck up.gif").getImage();
+        right = new ImageIcon("src/DDG/asset/duck up.gif").getImage();
 //        ghost = new ImageIcon("/src/images/ghost.gif").getImage();
 //        heart = new ImageIcon("/src/images/heart.png").getImage();
 
@@ -102,8 +102,8 @@ public class Model extends JPanel implements ActionListener {
 
         } else {
 
-            movePacman();
-            drawPacman(g2d);
+            moveduck();
+            drawDuck(g2d);
             moveGhosts(g2d);
             checkMaze();
         }
@@ -116,9 +116,11 @@ public class Model extends JPanel implements ActionListener {
         g2d.drawString(start, (SCREEN_SIZE)/4, 150);
     }
 
+    //Draw Score
+
     private void drawScore(Graphics2D g) {
         g.setFont(smallFont);
-        g.setColor(new Color(5, 181, 79));
+        g.setColor(Color.RED);
         String s = "Score: " + score;
         g.drawString(s, SCREEN_SIZE / 2 + 96, SCREEN_SIZE + 16);
 
@@ -244,7 +246,7 @@ public class Model extends JPanel implements ActionListener {
         g2d.drawImage(ghost, x, y, this);
     }
 
-    private void movePacman() {
+    private void moveduck() {
 
         int pos;
         short ch;
@@ -277,11 +279,11 @@ public class Model extends JPanel implements ActionListener {
                 pacmand_y = 0;
             }
         }
-        pacman_x = pacman_x + PACMAN_SPEED * pacmand_x;
-        pacman_y = pacman_y + PACMAN_SPEED * pacmand_y;
+        pacman_x = pacman_x + DUCK_SPEED * pacmand_x;
+        pacman_y = pacman_y + DUCK_SPEED * pacmand_y;
     }
 
-    private void drawPacman(Graphics2D g2d) {
+    private void drawDuck(Graphics2D g2d) {
 
         if (req_dx == -1) {
             g2d.drawImage(left, pacman_x + 1, pacman_y + 1, this);
@@ -302,7 +304,7 @@ public class Model extends JPanel implements ActionListener {
         for (y = 0; y < SCREEN_SIZE; y += BLOCK_SIZE) {
             for (x = 0; x < SCREEN_SIZE; x += BLOCK_SIZE) {
 
-                g2d.setColor(new Color(0,72,251));
+                g2d.setColor(new Color(223,212,176));
                 g2d.setStroke(new BasicStroke(5));
 
                 if ((levelData[i] == 0)) {
