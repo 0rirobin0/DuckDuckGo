@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b1f1fde-416e-4483-8baf-78805e3a610e" name="Changes" comment="duck Up modified">
-      <change afterPath="$PROJECT_DIR$/src/DDG/asset/Duck down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DDG/asset/duck up.gif" afterDir="false" />
+    <list default="true" id="6b1f1fde-416e-4483-8baf-78805e3a610e" name="Changes" comment="Robin's Commit">
+      <change afterPath="$PROJECT_DIR$/src/DDG/asset/heart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DDG/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DDG/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DDG/asset/Duck down.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/DDG/asset/Duck down.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DDG/asset/duck up.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/DDG/asset/duck up.gif" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690880300817</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Robin's Commit">
+      <created>1690966522876</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690966522876</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,6 +98,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="asset and gamelogic update" />
     <MESSAGE value="duck Up modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="duck Up modified" />
+    <MESSAGE value="Robin's Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Robin's Commit" />
   </component>
 </project>
