@@ -1,6 +1,7 @@
 package DDG;
 
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -145,7 +146,7 @@ public class Model extends JPanel implements ActionListener {
 
         if (finished) {
 
-            score += 50;
+            score += 10;
 
             if (N_GHOSTS < MAX_GHOSTS) {
                 N_GHOSTS++;
@@ -282,17 +283,27 @@ public class Model extends JPanel implements ActionListener {
         pacman_x = pacman_x + DUCK_SPEED * pacmand_x;
         pacman_y = pacman_y + DUCK_SPEED * pacmand_y;
     }
+    private Image scaledDown(Image originalImage, int newWidth, int newHeight) {             //for decrase the duck size
+        return originalImage.getScaledInstance(newWidth, newHeight, Image.SCALE_DEFAULT);
+    }
+    
 
     private void drawDuck(Graphics2D g2d) {
 
+          int duckSize = 30; // Set the new size for the duck
+          AffineTransform transform = new AffineTransform();
+          transform.translate(pacman_x + 1, pacman_y + 1);
+          transform.scale((double) duckSize / down.getWidth(this), (double) duckSize / down.getHeight(this));
+      
+
         if (req_dx == -1) {
-            g2d.drawImage(left, pacman_x + 1, pacman_y + 1, this);
+            g2d.drawImage(left,transform,  this);
         } else if (req_dx == 1) {
-            g2d.drawImage(right, pacman_x + 1, pacman_y + 1, this);
+            g2d.drawImage(right,transform, this);
         } else if (req_dy == -1) {
-            g2d.drawImage(up, pacman_x + 1, pacman_y + 1, this);
+            g2d.drawImage(up,transform, this);
         } else {
-            g2d.drawImage(down, pacman_x + 1, pacman_y + 1, this);
+            g2d.drawImage(down,transform, this);
         }
     }
 
@@ -436,8 +447,7 @@ public class Model extends JPanel implements ActionListener {
                     inGame = false;
                 }
             } else {
-                if (key == KeyEvent.VK_SPACE) {
-                    inGame = true;
+                if (key == KeyEvent.VK_SPACE) {                    inGame = true;
                     initGame();
                 }
             }
