@@ -315,7 +315,7 @@ public class Model extends JPanel implements ActionListener {
         for (y = 0; y < SCREEN_SIZE; y += BLOCK_SIZE) {
             for (x = 0; x < SCREEN_SIZE; x += BLOCK_SIZE) {
 
-                g2d.setColor(Color.orange);
+                g2d.setColor(Color.green);
                 g2d.setStroke(new BasicStroke(5));
 
                 if ((levelData[i] == 0)) {
