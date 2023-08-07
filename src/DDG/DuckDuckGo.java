@@ -14,7 +14,7 @@ public class DuckDuckGo extends JFrame{
     public static void main(String[] args) {
         DuckDuckGo ddg = new DuckDuckGo();
         ddg.setVisible(true);
-        ddg.setTitle("DuckDuckGo");
+        ddg.setTitle("DuckDuckGo-Game");
         ddg.setSize(380,420);
         ddg.setDefaultCloseOperation(EXIT_ON_CLOSE);
         ddg.setLocationRelativeTo(null);

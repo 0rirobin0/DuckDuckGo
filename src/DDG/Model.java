@@ -73,8 +73,8 @@ public class Model extends JPanel implements ActionListener {
         down = new ImageIcon("src/DDG/asset/Duck down.gif").getImage();
         up = new ImageIcon("src/DDG/asset/Duck Up.gif").getImage();
         left = new ImageIcon("src/DDG/asset/duck up.gif").getImage();
-        right = new ImageIcon("src/DDG/asset/duck up.gif").getImage();
-ghost = new ImageIcon("src/DDG/asset/fox.gif").getImage();
+        right = new ImageIcon("src/DDG/asset/duckright.gif").getImage();
+        ghost = new ImageIcon("src/DDG/asset/fox.gif").getImage();
         heart = new ImageIcon("src/DDG/asset/heart.png").getImage();
 
     }
