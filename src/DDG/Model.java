@@ -112,7 +112,7 @@ public class Model extends JPanel implements ActionListener {
     private void showIntroScreen(Graphics2D g2d) {
 
         String start = "Press SPACE to start";
-        g2d.setColor(Color.yellow);
+        g2d.setColor(Color.orange);
         g2d.drawString(start, (SCREEN_SIZE)/4, 150);
     }
 
@@ -120,7 +120,7 @@ public class Model extends JPanel implements ActionListener {
 
     private void drawScore(Graphics2D g) {
         g.setFont(smallFont);
-        g.setColor(Color.RED);
+        g.setColor(Color.green);
         String s = "Score: " + score;
         g.drawString(s, SCREEN_SIZE / 2 + 96, SCREEN_SIZE + 16);
 
@@ -304,7 +304,7 @@ public class Model extends JPanel implements ActionListener {
         for (y = 0; y < SCREEN_SIZE; y += BLOCK_SIZE) {
             for (x = 0; x < SCREEN_SIZE; x += BLOCK_SIZE) {
 
-                g2d.setColor(new Color(223,212,176));
+                g2d.setColor(Color.orange);
                 g2d.setStroke(new BasicStroke(5));
 
                 if ((levelData[i] == 0)) {
@@ -330,7 +330,7 @@ public class Model extends JPanel implements ActionListener {
                 }
 
                 if ((screenData[i] & 16) != 0) {
-                    g2d.setColor(new Color(255,255,255));
+                    g2d.setColor(Color.pink);
                     g2d.fillOval(x + 10, y + 10, 6, 6);
                 }
 
